@@ -1,27 +1,77 @@
-
-h1{
-    font-size: 30px;
-    text-decoration-line: underline;
-
+/* Gray backdrop behind the "page" so the borders/shadow are visible */
+html {
+    background: #e7e7e7;
 }
 
-img{
-    width: 100px;
-    place-content: center;
-    place-items: center;
+body {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #222;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 40px 50px 60px;
+    line-height: 1.6;
+
+    /* the "page" look */
+    background: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
+    min-height: 1000px; /* roughly an A4-ish sheet height, adjust as you like */
 }
 
-.container{
-    display: flex;
-    justify-content: right;
-    gap: 10rem;
+h1 {
+    font-size: 2rem;
+    margin: 0 0 10px;
 }
-h3{
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 14px 0 22px;
+}
+
+h3 {
+    color: #2e8b57;
+    font-size: 1.25rem;
+    margin: 22px 0 10px;
+}
+
+/* Photo: floats to the top right, text below/around it flows normally */
+.container {
+    float: right;
+    width: 150px;
+    margin: 0 0 20px 20px;
+}
+
+.container img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+p {
+    margin: 0 0 14px;
+}
+
+p small {
+    color: #1a3fc4;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.Copyright {
+    color: #666;
+    font-weight: normal;
+}
+
+/* Stack the photo above the text again on narrow screens */
+@media (max-width: 560px) {
+    .container {
+        float: none;
+        width: 120px;
+        margin: 0 0 16px;
+    }
+}
+h2{
     color: green;
-}
-small{
-    color: blue;
-}
-small.Copyright {
-    color: black;
 }
